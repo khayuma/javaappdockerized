@@ -23,7 +23,7 @@ pipeline {
 
        stage('Docker image build') {
            steps {
-               sh 'docker build -t myapp.'
+               sh 'docker build -t myapp .'
            }
        }
        stage('Docker Container launch') {
