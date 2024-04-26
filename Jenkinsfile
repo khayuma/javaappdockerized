@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps {
-                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_TOK', url: 'https://github.com/khayuma/jenkins.git']])
+                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_TOK', url: 'https://github.com/khayuma/javaappdockerized.git']])
             }
         }
 
