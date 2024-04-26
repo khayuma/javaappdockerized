@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'Maven'
-    }    
+    }  
     stages {
         stage('Git checkout') {
             steps {
@@ -21,15 +21,21 @@ pipeline {
             }
        }  
 
-       stage('Docker image build') {
+       stage('Docker Image build') {
            steps {
                sh 'docker build -t myapp .'
            }
        }
+
        stage('Docker Container launch') {
            steps {
-              sh 'docker run -d -p 8050:8080 -- name mycontainer myapp'
+               sh 'docker run -d -p 8050:8080 --name mycontainer myapp'
            }
        }
+
+
+
     }
-}              
+
+    
+}
